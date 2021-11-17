@@ -10,11 +10,12 @@
     
     <canvas id="c" width="800" height="600" style="border: 1px solid black;"></canvas>
     
-    <h1>
+    <h3>
         Podaj długość boku kwadratu: 
         <input type="numer" id="a">
-        <button id="drawButton" onclick="draw()">Rysować</button>
-    </h1>
+        <button id="drawButton" onclick="draw()">Rysuj</button>
+        <button id="drawButton" onclick="c()">Wyczyść</button>
+    </h3>
 
     <script>
         const canvas = document.getElementById('c');
@@ -40,7 +41,7 @@
             let drawStarty = (canvasHeight -a) / 2;
             ctx.strokeRect(drawStartx, drawStarty, a, a);
         }
-        function clear() {
+        function c() {
             ctx.fillStyle = white
             ctx.fillRect(0,0,800,600)
         }
